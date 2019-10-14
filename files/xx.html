@@ -1,0 +1,1249 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 数据库 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>聚合 | 数据库</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../files/mog2.html" />
+    
+    
+    <link rel="prev" href="../files/mog.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="7.1"
+        data-chapter-title="聚合"
+        data-filepath="files/xx.md"
+        data-basepath=".."
+        data-revision="Wed Apr 17 2019 01:59:03 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="files/index.html">
+            
+                
+                    <a href="../files/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        1.Mysql基本使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="files/mysql01.html">
+            
+                
+                    <a href="../files/mysql01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        1.1数据库简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="files/mysql02.html">
+            
+                
+                    <a href="../files/mysql02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        1.2mysql安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="files/mysql03.html">
+            
+                
+                    <a href="../files/mysql03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        1.3数据完整性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="files/mysql04.html">
+            
+                
+                    <a href="../files/mysql04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        1.4Navicat图形界面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="files/mysql05.html">
+            
+                
+                    <a href="../files/mysql05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        1.5命令行脚本
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="files/select.html">
+            
+                
+                    <a href="../files/select.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        2.Mysql查询
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="files/select01.html">
+            
+                
+                    <a href="../files/select01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        2.1查询条件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="files/select02.html">
+            
+                
+                    <a href="../files/select02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        2.2聚合函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="files/select03.html">
+            
+                
+                    <a href="../files/select03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        2.3分组与分页
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="files/select04.html">
+            
+                
+                    <a href="../files/select04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        2.4连接查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="files/select05.html">
+            
+                
+                    <a href="../files/select05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        2.5子查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="files/select06.html">
+            
+                
+                    <a href="../files/select06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        2.6总结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="files/pymysql.html">
+            
+                
+                    <a href="../files/pymysql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        3.Python与Mysql交互
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="files/pymysql01.html">
+            
+                
+                    <a href="../files/pymysql01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        3.1sql查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="files/pymysql02.html">
+            
+                
+                    <a href="../files/pymysql02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        3.2数据库设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="files/pymysql03.html">
+            
+                
+                    <a href="../files/pymysql03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        3.3Python操作mysql
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="files/pymysql04.html">
+            
+                
+                    <a href="../files/pymysql04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        3.4增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="files/pymysql05.html">
+            
+                
+                    <a href="../files/pymysql05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        3.5参数化
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="files/gaoji.html">
+            
+                
+                    <a href="../files/gaoji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        4.Mysql高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="files/gaoji01.html">
+            
+                
+                    <a href="../files/gaoji01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        4.1视图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="files/gaoji02.html">
+            
+                
+                    <a href="../files/gaoji02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        4.2事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="files/gaoji03.html">
+            
+                
+                    <a href="../files/gaoji03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        4.3索引
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="files/redis.html">
+            
+                
+                    <a href="../files/redis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        5.Redis数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="files/redis01.html">
+            
+                
+                    <a href="../files/redis01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        5.1Redis安装与简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="files/redis02.html">
+            
+                
+                    <a href="../files/redis02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        5.2Redis数据库操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="files/redis03.html">
+            
+                
+                    <a href="../files/redis03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        5.3Python与Redis交互
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="files/mongodb.html">
+            
+                
+                    <a href="../files/mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        6.MongoDB数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="files/mo1.html">
+            
+                
+                    <a href="../files/mo1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        命令行基本操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="files/mo2.html">
+            
+                
+                    <a href="../files/mo2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        集合操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="files/mo3.html">
+            
+                
+                    <a href="../files/mo3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        数据类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="files/mo4.html">
+            
+                
+                    <a href="../files/mo4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="files/mo5.html">
+            
+                
+                    <a href="../files/mo5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="files/mo6.html">
+            
+                
+                    <a href="../files/mo6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        MongoDB与Python交互
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="files/mog.html">
+            
+                
+                    <a href="../files/mog.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        7.MongoDB高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1" data-path="files/xx.html">
+            
+                
+                    <a href="../files/xx.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="files/mog2.html">
+            
+                
+                    <a href="../files/mog2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="files/mog3.html">
+            
+                
+                    <a href="../files/mog3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        数据练习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="files/li.html">
+            
+                
+                    <a href="../files/li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        8.案例
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="files/li01.html">
+            
+                
+                    <a href="../files/li01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        mysql表设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="files/li02.html">
+            
+                
+                    <a href="../files/li02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        注册
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="files/li03.html">
+            
+                
+                    <a href="../files/li03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="files/li04.html">
+            
+                
+                    <a href="../files/li04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        加入mongodb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="files/li05.html">
+            
+                
+                    <a href="../files/li05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        加入redis
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >数据库</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x805A;&#x5408;">&#x805A;&#x5408;</h1>
+<ul>
+<li>&#x805A;&#x5408;(aggregate)&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x6570;&#x636E;&#xFF0C;&#x7C7B;&#x4F3C;sql&#x4E2D;&#x7684;sum()&#x3001;avg()</li>
+<li>&#x8BED;&#x6CD5;</li>
+</ul>
+<pre><code>db.&#x96C6;&#x5408;&#x540D;&#x79F0;.aggregate({&#x7BA1;&#x9053;:{&#x8868;&#x8FBE;&#x5F0F;}})
+</code></pre><h4 id="&#x7BA1;&#x9053;">&#x7BA1;&#x9053;</h4>
+<ul>
+<li>&#x7BA1;&#x9053;&#x5728;Unix&#x548C;Linux&#x4E2D;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x5C06;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4F5C;&#x4E3A;&#x4E0B;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;</li>
+</ul>
+<pre><code>ps ajx | grep mongo
+</code></pre><ul>
+<li><p>&#x5728;mongodb&#x4E2D;&#xFF0C;&#x7BA1;&#x9053;&#x5177;&#x6709;&#x540C;&#x6837;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x6587;&#x6863;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x7BA1;&#x9053;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x5904;&#x7406;</p>
+</li>
+<li><p>&#x5E38;&#x7528;&#x7BA1;&#x9053;</p>
+<pre><code class="lang-python">$group&#xFF1A;&#x5C06;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6587;&#x6863;&#x5206;&#x7EC4;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;
+$match&#xFF1A;&#x8FC7;&#x6EE4;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x8F93;&#x51FA;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x6863;
+$project&#xFF1A;&#x4FEE;&#x6539;&#x8F93;&#x5165;&#x6587;&#x6863;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5982;&#x91CD;&#x547D;&#x540D;&#x3001;&#x589E;&#x52A0;&#x3001;&#x5220;&#x9664;&#x5B57;&#x6BB5;&#x3001;&#x521B;&#x5EFA;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;
+$sort&#xFF1A;&#x5C06;&#x8F93;&#x5165;&#x6587;&#x6863;&#x6392;&#x5E8F;&#x540E;&#x8F93;&#x51FA;
+$limit&#xFF1A;&#x9650;&#x5236;&#x805A;&#x5408;&#x7BA1;&#x9053;&#x8FD4;&#x56DE;&#x7684;&#x6587;&#x6863;&#x6570;
+$skip&#xFF1A;&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4F59;&#x4E0B;&#x7684;&#x6587;&#x6863;
+$unwind&#xFF1A;&#x5C06;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x62C6;&#x5206;
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x8868;&#x8FBE;&#x5F0F;">&#x8868;&#x8FBE;&#x5F0F;</h4>
+<ul>
+<li>&#x5904;&#x7406;&#x8F93;&#x5165;&#x6587;&#x6863;&#x5E76;&#x8F93;&#x51FA;</li>
+<li>&#x8BED;&#x6CD5;</li>
+</ul>
+<pre><code>&#x8868;&#x8FBE;&#x5F0F;:&apos;$&#x5217;&#x540D;&apos;
+</code></pre><ul>
+<li><p>&#x5E38;&#x7528;&#x8868;&#x8FBE;&#x5F0F;</p>
+<pre><code class="lang-shell">$sum&#xFF1A;&#x8BA1;&#x7B97;&#x603B;&#x548C;&#xFF0C;$sum:1 &#x8868;&#x793A;&#x4EE5;&#x4E00;&#x500D;&#x8BA1;&#x6570;
+$avg&#xFF1A;&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x503C;
+$min&#xFF1A;&#x83B7;&#x53D6;&#x6700;&#x5C0F;&#x503C;
+$max&#xFF1A;&#x83B7;&#x53D6;&#x6700;&#x5927;&#x503C;
+$push&#xFF1A;&#x5728;&#x7ED3;&#x679C;&#x6587;&#x6863;&#x4E2D;&#x63D2;&#x5165;&#x503C;&#x5230;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;
+$first&#xFF1A;&#x6839;&#x636E;&#x8D44;&#x6E90;&#x6587;&#x6863;&#x7684;&#x6392;&#x5E8F;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6570;&#x636E;
+$last&#xFF1A;&#x6839;&#x636E;&#x8D44;&#x6E90;&#x6587;&#x6863;&#x7684;&#x6392;&#x5E8F;&#x83B7;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6570;&#x636E;
+</code></pre>
+</li>
+</ul>
+<p>&#x51C6;&#x5907;&#x6570;&#x636E;</p>
+<pre><code class="lang-python">db.hero.drop()
+db.hero.insert({name:<span class="hljs-string">&apos;&#x76D6;&#x4F26;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x5FB7;&#x739B;&#x897F;&#x4E9A;&apos;</span>,age:<span class="hljs-number">20</span>,gender:<span class="hljs-number">1</span>})
+db.hero.insert({name:<span class="hljs-string">&apos;&#x5361;&#x7279;&#x7433;&#x5A1C;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x8BFA;&#x514B;&#x8428;&#x65AF;&apos;</span>,age:<span class="hljs-number">18</span>,gender:<span class="hljs-number">0</span>})
+db.hero.insert({name:<span class="hljs-string">&apos;&#x62C9;&#x514B;&#x4E1D;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x5FB7;&#x739B;&#x897F;&#x4E9A;&apos;</span>,age:<span class="hljs-number">18</span>,gender:<span class="hljs-number">0</span>})
+db.hero.insert({name:<span class="hljs-string">&apos;&#x5FB7;&#x83B1;&#x6587;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x8BFA;&#x514B;&#x8428;&#x65AF;&apos;</span>,age:<span class="hljs-number">40</span>,gender:<span class="hljs-number">1</span>})
+db.hero.insert({name:<span class="hljs-string">&apos;&#x4E9A;&#x7D22;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x827E;&#x6B27;&#x5C3C;&#x4E9A;&apos;</span>,age:<span class="hljs-number">16</span>,gender:<span class="hljs-number">1</span>})
+db.hero.insert({name:<span class="hljs-string">&apos;&#x5361;&#x5C14;&#x739B;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x827E;&#x6B27;&#x5C3C;&#x4E9A;&apos;</span>,age:<span class="hljs-number">45</span>,gender:<span class="hljs-number">0</span>})
+db.hero.insert({name:<span class="hljs-string">&apos;&#x63D0;&#x83AB;&apos;</span>,hometown:<span class="hljs-string">&apos;&#x73ED;&#x5FB7;&#x5C14;&apos;</span>,age:<span class="hljs-number">18</span>,gender:<span class="hljs-number">1</span>})
+</code></pre>
+<h3 id="1group">1.group</h3>
+<ul>
+<li>&#x5C06;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6587;&#x6863;&#x5206;&#x7EC4;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;</li>
+<li>_id&#x8868;&#x793A;&#x5206;&#x7EC4;&#x7684;&#x4F9D;&#x636E;&#xFF0C;&#x4F7F;&#x7528;&#x67D0;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x683C;&#x5F0F;&#x4E3A;&apos;$&#x5B57;&#x6BB5;&apos;</li>
+<li>&#x4F8B;1&#xFF1A;&#x7EDF;&#x8BA1;&#x7537;&#x751F;&#x3001;&#x5973;&#x751F;&#x7684;&#x603B;&#x4EBA;&#x6570;</li>
+</ul>
+<pre><code class="lang-shell">db.hero.aggregate(
+    {$group:
+        {
+            _id:&apos;$gender&apos;,
+            counter:{$sum:1}
+        }
+    }
+)
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-shell">{ &quot;_id&quot; : 0, &quot;counter&quot; : 3 }
+{ &quot;_id&quot; : 1, &quot;counter&quot; : 4 }
+</code></pre>
+<h4 id="group-by-null">group by null</h4>
+<ul>
+<li>&#x5C06;&#x96C6;&#x5408;&#x4E2D;&#x6240;&#x6709;&#x6587;&#x6863;&#x5206;&#x4E3A;&#x4E00;&#x7EC4;</li>
+<li>&#x4F8B;2&#xFF1A;&#x6C42;&#x5B66;&#x751F;&#x603B;&#x4EBA;&#x6570;&#x3001;&#x5E73;&#x5747;&#x5E74;&#x9F84;</li>
+</ul>
+<pre><code class="lang-shell">db.hero.aggregate(
+    {$group:
+        {
+            _id:null,
+            &#x6570;&#x91CF;:{$sum:1},
+            &#x5E73;&#x5747;&#x5E74;&#x9F84;:{$avg:&apos;$age&apos;}
+        }
+    }
+)
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-shell">{ &quot;_id&quot; : null, &quot;&#x6570;&#x91CF;&quot; : 7, &quot;&#x5E73;&#x5747;&#x5E74;&#x9F84;&quot; : 25 }
+</code></pre>
+<h4 id="&#x900F;&#x89C6;&#x6570;&#x636E;">&#x900F;&#x89C6;&#x6570;&#x636E;</h4>
+<ul>
+<li>&#x4F8B;3&#xFF1A;&#x7EDF;&#x8BA1;&#x5B66;&#x751F;&#x6027;&#x522B;&#x53CA;&#x5B66;&#x751F;&#x59D3;&#x540D;</li>
+</ul>
+<pre><code>db.hero.aggregate(
+    {$group:
+        {
+            _id:&apos;$gender&apos;,
+            &#x6027;&#x522B;:{$push:&apos;$name&apos;}
+        }
+    }
+)
+</code></pre><p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-shell">{ &quot;_id&quot; : 0, &quot;&#x6027;&#x522B;&quot; : [ &quot;&#x5361;&#x7279;&#x7433;&#x5A1C;&quot;, &quot;&#x62C9;&#x514B;&#x4E1D;&quot;, &quot;&#x5361;&#x5C14;&#x739B;&quot; ] }
+{ &quot;_id&quot; : 1, &quot;&#x6027;&#x522B;&quot; : [ &quot;&#x76D6;&#x4F26;&quot;, &quot;&#x5FB7;&#x83B1;&#x6587;&quot;, &quot;&#x4E9A;&#x7D22;&quot;, &quot;&#x63D0;&#x83AB;&quot; ] }
+</code></pre>
+<ul>
+<li>&#x5C06;&#x6587;&#x6863;&#x5185;&#x5BB9;&#x52A0;&#x5165;&#x5230;&#x7ED3;&#x679C;&#x96C6;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</li>
+</ul>
+<pre><code>db.hero.aggregate(
+    {$group:
+        {
+            _id:&apos;$gender&apos;,
+            &#x6027;&#x522B;:{$push:&apos;$$ROOT&apos;}
+        }
+    }
+).pretty()
+</code></pre><p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-shell">{
+        &quot;_id&quot; : 0,
+        &quot;&#x6027;&#x522B;&quot; : [
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d5f910a54fd8838acf&quot;),
+                        &quot;name&quot; : &quot;&#x5361;&#x7279;&#x7433;&#x5A1C;&quot;,
+                        &quot;hometown&quot; : &quot;&#x8BFA;&#x514B;&#x8428;&#x65AF;&quot;,
+                        &quot;age&quot; : 18,
+                        &quot;gender&quot; : 0
+                },
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d5f910a54fd8838ad0&quot;),
+                        &quot;name&quot; : &quot;&#x62C9;&#x514B;&#x4E1D;&quot;,
+                        &quot;hometown&quot; : &quot;&#x5FB7;&#x739B;&#x897F;&#x4E9A;&quot;,
+                        &quot;age&quot; : 18,
+                        &quot;gender&quot; : 0
+                },
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d5f910a54fd8838ad3&quot;),
+                        &quot;name&quot; : &quot;&#x5361;&#x5C14;&#x739B;&quot;,
+                        &quot;hometown&quot; : &quot;&#x827E;&#x6B27;&#x5C3C;&#x4E9A;&quot;,
+                        &quot;age&quot; : 45,
+                        &quot;gender&quot; : 0
+                }
+        ]
+}
+{
+        &quot;_id&quot; : 1,
+        &quot;&#x6027;&#x522B;&quot; : [
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d5f910a54fd8838ace&quot;),
+                        &quot;name&quot; : &quot;&#x76D6;&#x4F26;&quot;,
+                        &quot;hometown&quot; : &quot;&#x5FB7;&#x739B;&#x897F;&#x4E9A;&quot;,
+                        &quot;age&quot; : 20,
+                        &quot;gender&quot; : 1
+                },
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d5f910a54fd8838ad1&quot;),
+                        &quot;name&quot; : &quot;&#x5FB7;&#x83B1;&#x6587;&quot;,
+                        &quot;hometown&quot; : &quot;&#x8BFA;&#x514B;&#x8428;&#x65AF;&quot;,
+                        &quot;age&quot; : 40,
+                        &quot;gender&quot; : 1
+                },
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d5f910a54fd8838ad2&quot;),
+                        &quot;name&quot; : &quot;&#x4E9A;&#x7D22;&quot;,
+                        &quot;hometown&quot; : &quot;&#x827E;&#x6B27;&#x5C3C;&#x4E9A;&quot;,
+                        &quot;age&quot; : 16,
+                        &quot;gender&quot; : 1
+                },
+                {
+                        &quot;_id&quot; : ObjectId(&quot;5cb5f7d7f910a54fd8838ad4&quot;),
+                        &quot;name&quot; : &quot;&#x63D0;&#x83AB;&quot;,
+                        &quot;hometown&quot; : &quot;&#x73ED;&#x5FB7;&#x5C14;&quot;,
+                        &quot;age&quot; : 18,
+                        &quot;gender&quot; : 1
+                }
+        ]
+}
+</code></pre>
+<h3 id="2match">2.match</h3>
+<ul>
+<li>&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x8F93;&#x51FA;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x6863;</li>
+<li>&#x4F7F;&#x7528;MongoDB&#x7684;&#x6807;&#x51C6;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;</li>
+<li>match&#x662F;&#x7BA1;&#x9053;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7ED3;&#x679C;&#x4EA4;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;&#x7BA1;&#x9053;&#xFF0C;&#x4F46;&#x662F;find&#x4E0D;&#x53EF;&#x4EE5;</li>
+<li>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;&#x5E74;&#x9F84;&#x5927;&#x4E8E;20&#x7684;&#x5B66;&#x751F;</li>
+</ul>
+<pre><code>db.hero.aggregate(
+    {$match:{age:{$gt:20}}}
+)
+</code></pre><ul>
+<li>&#x4F8B;2&#xFF1A;&#x67E5;&#x8BE2;&#x5E74;&#x9F84;&#x5927;&#x4E8E;18&#x7684;&#x7537;&#x751F;&#x3001;&#x5973;&#x751F;&#x4EBA;&#x6570;</li>
+</ul>
+<pre><code>db.hero.aggregate(
+    {$match:{age:{$gt:18}}},
+    {$group:{_id:&apos;$gender&apos;,counter:{$sum:1}}}
+)
+</code></pre><h3 id="3project">3.project</h3>
+<ul>
+<li>&#x4FEE;&#x6539;&#x8F93;&#x5165;&#x6587;&#x6863;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5982;&#x91CD;&#x547D;&#x540D;&#x3001;&#x589E;&#x52A0;&#x3001;&#x5220;&#x9664;&#x5B57;&#x6BB5;&#x3001;&#x521B;&#x5EFA;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;</li>
+<li>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x7684;&#x59D3;&#x540D;&#x3001;&#x5E74;&#x9F84;</li>
+</ul>
+<pre><code>db.hero.aggregate(
+    {$project:{_id:0,name:1,age:1}}
+)
+</code></pre><ul>
+<li>&#x4F8B;2&#xFF1A;&#x67E5;&#x8BE2;&#x7537;&#x751F;&#x3001;&#x5973;&#x751F;&#x4EBA;&#x6570;&#xFF0C;&#x8F93;&#x51FA;&#x4EBA;&#x6570;</li>
+</ul>
+<pre><code class="lang-shell">db.hero.aggregate(
+    {$group:{_id:&apos;$gender&apos;,counter:{$sum:1}}},
+    {$project:{_id:0,counter:1}}
+)
+</code></pre>
+<ul>
+<li>&#x4F8B;3&#xFF1A;&#x67E5;&#x8BE2;&#x7537;&#x751F;&#x3001;&#x5973;&#x751F;&#x4EBA;&#x6570;&#x3001;&#x5E73;&#x5747;&#x5E74;&#x9F84;&#xFF0C;&#x8F93;&#x51FA; &#x6027;&#x522B;&#x3001;&#x6570;&#x91CF;&#x3001;&#x5E73;&#x5747;&#x5E74;&#x9F84;</li>
+</ul>
+<pre><code class="lang-shell">db.hero.aggregate(
+ {$group:{_id:&quot;$gender&quot;,&#x6570;&#x91CF;:{$sum:1},&#x5E73;&#x5747;&#x5E74;&#x9F84;:{$avg:&apos;$age&apos;}}},
+ {$project:{gender:&quot;$_id&quot;,&#x6570;&#x91CF;:1,&#x5747;&#x9F84;:&apos;$&#x5E73;&#x5747;&#x5E74;&#x9F84;&apos;,_id:0}})
+</code></pre>
+<h3 id="4sort">4.sort</h3>
+<ul>
+<li>&#x5C06;&#x8F93;&#x5165;&#x6587;&#x6863;&#x6392;&#x5E8F;&#x540E;&#x8F93;&#x51FA;</li>
+<li>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#xFF0C;&#x6309;&#x5E74;&#x9F84;&#x5347;&#x5E8F;</li>
+</ul>
+<pre><code>db.hero.aggregate({$sort:{age:1}})
+</code></pre><ul>
+<li>&#x4F8B;2&#xFF1A;&#x67E5;&#x8BE2;&#x7537;&#x751F;&#x3001;&#x5973;&#x751F;&#x4EBA;&#x6570;&#xFF0C;&#x6309;&#x4EBA;&#x6570;&#x964D;&#x5E8F;</li>
+</ul>
+<pre><code>db.hero.aggregate(
+    {$group:{_id:&apos;$gender&apos;,counter:{$sum:1}}},
+    {$sort:{counter:-1}}
+)
+</code></pre><h3 id="5limit">5.limit</h3>
+<ul>
+<li>&#x9650;&#x5236;&#x805A;&#x5408;&#x7BA1;&#x9053;&#x8FD4;&#x56DE;&#x7684;&#x6587;&#x6863;&#x6570;</li>
+<li>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;2&#x6761;&#x5B66;&#x751F;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code>db.hero.aggregate({$limit:2})
+</code></pre><h3 id="6skip">6.skip</h3>
+<ul>
+<li>&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4F59;&#x4E0B;&#x7684;&#x6587;&#x6863;</li>
+<li>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;&#x4ECE;&#x7B2C;3&#x6761;&#x5F00;&#x59CB;&#x7684;&#x5B66;&#x751F;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code>db.hero.aggregate({$skip:2})
+</code></pre><ul>
+<li>&#x4F8B;2&#xFF1A;&#x7EDF;&#x8BA1;&#x7537;&#x751F;&#x3001;&#x5973;&#x751F;&#x4EBA;&#x6570;&#xFF0C;&#x6309;&#x4EBA;&#x6570;&#x5347;&#x5E8F;&#xFF0C;&#x53D6;&#x7B2C;&#x4E8C;&#x6761;&#x6570;&#x636E;</li>
+</ul>
+<pre><code class="lang-shell">db.hero.aggregate(
+    {$group:{_id:&apos;$gender&apos;,counter:{$sum:1}}},
+    {$sort:{counter:1}},
+    {$skip:1},
+    {$limit:1}
+)
+</code></pre>
+<ul>
+<li>&#x6CE8;&#x610F;&#x987A;&#x5E8F;&#xFF1A;&#x5148;&#x5199;skip&#xFF0C;&#x518D;&#x5199;limit</li>
+</ul>
+<h3 id="7unwind">7.unwind</h3>
+<ul>
+<li>&#x5C06;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x62C6;&#x5206;&#x6210;&#x591A;&#x6761;&#xFF0C;&#x6BCF;&#x6761;&#x5305;&#x542B;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x503C;</li>
+</ul>
+<h4 id="&#x8BED;&#x6CD5;1">&#x8BED;&#x6CD5;1</h4>
+<ul>
+<li>&#x5BF9;&#x67D0;&#x5B57;&#x6BB5;&#x503C;&#x8FDB;&#x884C;&#x62C6;&#x5206;</li>
+</ul>
+<pre><code>db.&#x96C6;&#x5408;&#x540D;&#x79F0;.aggregate({$unwind:&apos;$&#x5B57;&#x6BB5;&#x540D;&#x79F0;&apos;})
+</code></pre><ul>
+<li>&#x6784;&#x9020;&#x6570;&#x636E;</li>
+</ul>
+<pre><code>db.t2.insert({_id:1,item:&apos;t-shirt&apos;,size:[&apos;S&apos;,&apos;M&apos;,&apos;L&apos;]})
+</code></pre><ul>
+<li>&#x67E5;&#x8BE2;</li>
+</ul>
+<pre><code>db.t2.aggregate({$unwind:&apos;$size&apos;})
+</code></pre><h4 id="&#x8BED;&#x6CD5;2">&#x8BED;&#x6CD5;2</h4>
+<ul>
+<li>&#x5BF9;&#x67D0;&#x5B57;&#x6BB5;&#x503C;&#x8FDB;&#x884C;&#x62C6;&#x5206;</li>
+<li>&#x5904;&#x7406;&#x7A7A;&#x6570;&#x7EC4;&#x3001;&#x975E;&#x6570;&#x7EC4;&#x3001;&#x65E0;&#x5B57;&#x6BB5;&#x3001;null&#x60C5;&#x51B5;<ul>
+<li>&#x5C5E;&#x6027;preserveNullAndEmptyArrays&#x503C;&#x4E3A;false&#x8868;&#x793A;&#x4E22;&#x5F03;&#x5C5E;&#x6027;&#x503C;&#x4E3A;&#x7A7A;&#x7684;&#x6587;&#x6863;</li>
+<li>&#x5C5E;&#x6027;preserveNullAndEmptyArrays&#x503C;&#x4E3A;true&#x8868;&#x793A;&#x4FDD;&#x7559;&#x5C5E;&#x6027;&#x503C;&#x4E3A;&#x7A7A;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+</li>
+</ul>
+<pre><code>db.inventory.aggregate({
+    $unwind:{
+        path:&apos;$&#x5B57;&#x6BB5;&#x540D;&#x79F0;&apos;,
+        preserveNullAndEmptyArrays:&lt;boolean&gt; #&#x9632;&#x6B62;&#x6570;&#x636E;&#x4E22;&#x5931;
+    }
+})
+</code></pre><ul>
+<li>&#x6784;&#x9020;&#x6570;&#x636E;</li>
+</ul>
+<pre><code class="lang-shell">db.t3.insert([
+{ &quot;_id&quot; : 1, &quot;item&quot; : &quot;a&quot;, &quot;size&quot;: [ &quot;S&quot;, &quot;M&quot;, &quot;L&quot;] },
+{ &quot;_id&quot; : 2, &quot;item&quot; : &quot;b&quot;, &quot;size&quot; : [ ] },
+{ &quot;_id&quot; : 3, &quot;item&quot; : &quot;c&quot;, &quot;size&quot;: &quot;M&quot; },
+{ &quot;_id&quot; : 4, &quot;item&quot; : &quot;d&quot; },
+{ &quot;_id&quot; : 5, &quot;item&quot; : &quot;e&quot;, &quot;size&quot; : null }
+])
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528;&#x8BED;&#x6CD5;1&#x67E5;&#x8BE2;</li>
+</ul>
+<pre><code>db.t3.aggregate({$unwind:&apos;$size&apos;})
+</code></pre><ul>
+<li>&#x67E5;&#x770B;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x53D1;&#x73B0;&#x5BF9;&#x4E8E;&#x7A7A;&#x6570;&#x7EC4;&#x3001;&#x65E0;&#x5B57;&#x6BB5;&#x3001;null&#x7684;&#x6587;&#x6863;&#xFF0C;&#x90FD;&#x88AB;&#x4E22;&#x5F03;&#x4E86;</li>
+<li>&#x95EE;&#xFF1A;&#x5982;&#x4F55;&#x80FD;&#x4E0D;&#x4E22;&#x5F03;&#x5462;&#xFF1F;</li>
+<li>&#x7B54;&#xFF1A;&#x4F7F;&#x7528;&#x8BED;&#x6CD5;2&#x67E5;&#x8BE2;</li>
+</ul>
+<pre><code class="lang-shell">db.t3.aggregate({$unwind:{path:&apos;$size&apos;,preserveNullAndEmptyArrays:true}})
+</code></pre>
+<footer class="page-footer"><span class="copyright">CopyRight&#xA9;2019 &#x54B8;&#x9C7C;&#x8D85;&#x4EBA; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-04-17 01:58:57
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../files/mog.html" class="navigation navigation-prev " aria-label="Previous page: 7.MongoDB高级"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../files/mog2.html" class="navigation navigation-next " aria-label="Next page: 索引"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/js.cookie.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"tbfed-pagefooter":{"copyright":"CopyRight©2019 咸鱼超人","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"sectionx":{"tag":"b"},"toggle-chapters":{},"splitter":{},"emphasize":{},"mcqx":{},"katex":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 数据库 -->
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 数据库 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>5.2Redis数据库操作 | 数据库</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../files/redis03.html" />
+    
+    
+    <link rel="prev" href="../files/redis01.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="5.2"
+        data-chapter-title="5.2Redis数据库操作"
+        data-filepath="files/redis02.md"
+        data-basepath=".."
+        data-revision="Wed Apr 17 2019 01:59:03 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="files/index.html">
+            
+                
+                    <a href="../files/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        1.Mysql基本使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="files/mysql01.html">
+            
+                
+                    <a href="../files/mysql01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        1.1数据库简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="files/mysql02.html">
+            
+                
+                    <a href="../files/mysql02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        1.2mysql安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="files/mysql03.html">
+            
+                
+                    <a href="../files/mysql03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        1.3数据完整性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="files/mysql04.html">
+            
+                
+                    <a href="../files/mysql04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        1.4Navicat图形界面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="files/mysql05.html">
+            
+                
+                    <a href="../files/mysql05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        1.5命令行脚本
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="files/select.html">
+            
+                
+                    <a href="../files/select.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        2.Mysql查询
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="files/select01.html">
+            
+                
+                    <a href="../files/select01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        2.1查询条件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="files/select02.html">
+            
+                
+                    <a href="../files/select02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        2.2聚合函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="files/select03.html">
+            
+                
+                    <a href="../files/select03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        2.3分组与分页
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="files/select04.html">
+            
+                
+                    <a href="../files/select04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        2.4连接查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="files/select05.html">
+            
+                
+                    <a href="../files/select05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        2.5子查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="files/select06.html">
+            
+                
+                    <a href="../files/select06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        2.6总结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="files/pymysql.html">
+            
+                
+                    <a href="../files/pymysql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        3.Python与Mysql交互
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="files/pymysql01.html">
+            
+                
+                    <a href="../files/pymysql01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        3.1sql查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="files/pymysql02.html">
+            
+                
+                    <a href="../files/pymysql02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        3.2数据库设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="files/pymysql03.html">
+            
+                
+                    <a href="../files/pymysql03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        3.3Python操作mysql
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="files/pymysql04.html">
+            
+                
+                    <a href="../files/pymysql04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        3.4增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="files/pymysql05.html">
+            
+                
+                    <a href="../files/pymysql05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        3.5参数化
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="files/gaoji.html">
+            
+                
+                    <a href="../files/gaoji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        4.Mysql高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="files/gaoji01.html">
+            
+                
+                    <a href="../files/gaoji01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        4.1视图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="files/gaoji02.html">
+            
+                
+                    <a href="../files/gaoji02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        4.2事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="files/gaoji03.html">
+            
+                
+                    <a href="../files/gaoji03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        4.3索引
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="files/redis.html">
+            
+                
+                    <a href="../files/redis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        5.Redis数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="files/redis01.html">
+            
+                
+                    <a href="../files/redis01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        5.1Redis安装与简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="files/redis02.html">
+            
+                
+                    <a href="../files/redis02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        5.2Redis数据库操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="files/redis03.html">
+            
+                
+                    <a href="../files/redis03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        5.3Python与Redis交互
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="files/mongodb.html">
+            
+                
+                    <a href="../files/mongodb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        6.MongoDB数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="files/mo1.html">
+            
+                
+                    <a href="../files/mo1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        命令行基本操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="files/mo2.html">
+            
+                
+                    <a href="../files/mo2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        集合操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="files/mo3.html">
+            
+                
+                    <a href="../files/mo3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        数据类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="files/mo4.html">
+            
+                
+                    <a href="../files/mo4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="files/mo5.html">
+            
+                
+                    <a href="../files/mo5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="files/mo6.html">
+            
+                
+                    <a href="../files/mo6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        MongoDB与Python交互
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="files/mog.html">
+            
+                
+                    <a href="../files/mog.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        7.MongoDB高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="files/xx.html">
+            
+                
+                    <a href="../files/xx.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="files/mog2.html">
+            
+                
+                    <a href="../files/mog2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="files/mog3.html">
+            
+                
+                    <a href="../files/mog3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        数据练习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="files/li.html">
+            
+                
+                    <a href="../files/li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        8.案例
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="files/li01.html">
+            
+                
+                    <a href="../files/li01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        mysql表设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="files/li02.html">
+            
+                
+                    <a href="../files/li02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        注册
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="files/li03.html">
+            
+                
+                    <a href="../files/li03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="files/li04.html">
+            
+                
+                    <a href="../files/li04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        加入mongodb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="files/li05.html">
+            
+                
+                    <a href="../files/li05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        加入redis
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >数据库</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="52redis&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;">5.2Redis&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h1>
+<p>redis-cli &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</p>
+<p>redis &#x9ED8;&#x8BA4;&#x6709;16&#x4E2A;&#x5E93;&#xFF08;0-15&#xFF09;&#xFF0C;&#x8FDB;&#x5165;&#x540E;&#x9ED8;&#x8BA4;&#x5728;&#x7B2C;0&#x4E2A;&#x5E93;</p>
+<h4 id="&#x5207;&#x6362;&#x6570;&#x636E;&#x5E93;">&#x5207;&#x6362;&#x6570;&#x636E;&#x5E93;</h4>
+<pre><code>select index # index&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x6807;&#x53F7;
+</code></pre><p><img src="../img/02.png" alt="img"></p>
+<h4 id="redis&#x662F;keyvalue&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6BCF;&#x6761;&#x6570;&#x636E;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9;">redis&#x662F;key-value&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6BCF;&#x6761;&#x6570;&#x636E;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9;</h4>
+<p>&#x952E;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x503C;&#x7684;&#x7C7B;&#x578B;&#x5206;&#x4E3A;&#x4E94;&#x79CD;&#xFF1A;</p>
+<pre><code>1&#x3001;&#x5B57;&#x7B26;&#x4E32;string
+2&#x3001;&#x54C8;&#x5E0C;hash
+3&#x3001;&#x5217;&#x8868;list
+4&#x3001;&#x96C6;&#x5408;set
+5&#x3001;&#x6709;&#x5E8F;&#x96C6;&#x5408;zset
+</code></pre><h4 id="1&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;">1&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</h4>
+<ul>
+<li>&#x5B57;&#x7B26;&#x4E32;(string)&#x662F;redis&#x6700;&#x57FA;&#x672C;&#x7684;&#x7C7B;&#x578B;</li>
+<li>redis &#x9ED8;&#x8BA4;&#x6700;&#x5927;&#x80FD;&#x5B58;&#x50A8;512MB&#x6570;&#x636E;</li>
+</ul>
+<h4 id="&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x57FA;&#x672C;&#x64CD;&#x4F5C;">&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x57FA;&#x672C;&#x64CD;&#x4F5C;</h4>
+<ul>
+<li>set key value #&#x5982;&#x679C;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x521B;&#x5EFA;key&#xFF0C;&#x5982;&#x679C;&#x952E;&#x5B58;&#x5728;&#x90A3;&#x4E48;&#x66F4;&#x65B0;&#x503C;</li>
+</ul>
+<p>&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x952E;&#x4E3A;name&#x503C;&#x4E3A;python&#x7684;&#x6570;&#x636E;</p>
+<pre><code>set name python
+</code></pre><p><img src="../img/03.jpg" alt="img"></p>
+<ul>
+<li><p>setex key time value #&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x79D2;</p>
+<p>setex age 10 18 &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;key&#x4E3A;age&#xFF0C;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x4E3A;10&#x79D2;&#x7684;&#xFF0C;value&#x4E3A;18&#x7684;&#x6570;&#x636E;</p>
+</li>
+</ul>
+<p><img src="../img/04.jpg" alt="img"></p>
+<ul>
+<li><p>mset &#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A;&#x952E;&#x503C;</p>
+<p>mset key1 value1 key2 value2</p>
+</li>
+</ul>
+<p>&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x952E;&#x4E3A;&apos;name&apos;&#x503C;&#x4E3A;&apos;linux&apos;&#x3001;&#x952E;&#x4E3A;&apos;name1&apos;&#x503C;&#x4E3A;&apos;python&apos;&#x3001;&#x952E;&#x4E3A;&apos;name2&apos;&#x503C;&#x4E3A;&apos;mysql&apos;&#x3001;&#x952E;&#x4E3A;&apos;name3&apos;&#x503C;&#x4E3A;&apos;redis&apos;&#x7684;&#x6570;&#x636E;</p>
+<pre><code>mset name linux name1 python name2 mysql name3 redis
+</code></pre><p><img src="../img/05.jpg" alt="img"></p>
+<ul>
+<li>append &#x8FFD;&#x52A0;&#x503C;</li>
+</ul>
+<p>&#x5411;key&#x4E3A;name&#x6570;&#x636E;&#x8FFD;&#x52A0;&apos;+python&apos;</p>
+<p>&#x8FFD;&#x52A0;&#x76F8;&#x5F53;&#x4E8E;value&#x503C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x62FC;&#x63A5;</p>
+<p><img src="../img/06.jpg" alt="img"></p>
+<h4 id="&#x83B7;&#x53D6;&#x503C;&#xFF08;value&#xFF09;">&#x83B7;&#x53D6;&#x503C;&#xFF08;value&#xFF09;</h4>
+<pre><code>get key  #get &#x540E;&#x9762;&#x52A0;&#x4E0A;key&#x7684;&#x503C;&#x5C31;&#x53EF;&#x4EE5;&#x53D6;&#x5230;value
+mget key1 key2 key3  &#x540C;&#x65F6;&#x83B7;&#x53D6;&#x591A;&#x4E2A;key&#x7684;value&#x503C;
+</code></pre><p><img src="../img/07.jpg" alt="img"></p>
+<h4 id="&#x64CD;&#x4F5C;key">&#x64CD;&#x4F5C;key</h4>
+<p>keys * #&#x67E5;&#x770B;&#x6240;&#x6709;key</p>
+<p>keys &apos;*m*&apos; #&#x67E5;&#x770B;&#x5305;&#x542B;m&#x7684;key</p>
+<p><img src="../img/08.jpg" alt="img"></p>
+<p>exists key #&#x5224;&#x65AD;key&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x5B58;&#x5728;&#x8FD4;&#x56DE;1&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x8FD4;&#x56DE;0</p>
+<p><img src="../img/09.jpg" alt="img"></p>
+<p>type key #&#x67E5;&#x770B;value&#x7684;&#x7C7B;&#x578B;</p>
+<p>del key key1 key 2 #&#x5220;&#x9664;key</p>
+<p><img src="../img/10.jpg" alt="img"></p>
+<p>expire key seconds #&#x7ED9;&#x952E;&#x8BBE;&#x7F6E;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;</p>
+<p><img src="../img/11.jpg" alt="img"></p>
+<h4 id="2&#x3001;&#x54C8;&#x5E0C;hash&#x7C7B;&#x578B;">2&#x3001;&#x54C8;&#x5E0C;hash&#x7C7B;&#x578B;</h4>
+<p>Redis hash&#x662F;&#x4E00;&#x4E2A;string&#x7C7B;&#x578B;&#x7684;field&#x548C;value&#x7684;&#x6620;&#x5C04;&#x8868;&#xFF0C;hash&#x7279;&#x522B;&#x9002;&#x5408;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>Redis &#x4E2D;&#x6BCF;&#x4E2A; hash &#x53EF;&#x4EE5;&#x5B58;&#x50A8; 2**32 - 1 &#x952E;&#x503C;&#x5BF9;&#xFF08;40&#x591A;&#x4EBF;&#xFF09;&#x3002;</p>
+<h5 id="&#x8BBE;&#x7F6E;">&#x8BBE;&#x7F6E;</h5>
+<pre><code>hset key field value  #key&#x952E;,field&#x5C5E;&#x6027;,value&#x503C;
+hmset key field1 value1 [field2 value2 ]  #&#x540C;&#x65F6;&#x5C06;&#x591A;&#x4E2A;field-value(&#x57DF;-&#x503C;)&#x5BF9;&#x8BBE;&#x7F6E;&#x5230;&#x54C8;&#x5E0C;&#x8868;key&#x4E2D;&#x3002;
+</code></pre><p>&#x5982;&#x679C;field&#x503C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x65B0;&#x5EFA;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5219;&#x5C06;value&#x503C;&#x66F4;&#x65B0;</p>
+<p><img src="../img/12.jpg" alt="img"></p>
+<h5 id="&#x83B7;&#x53D6;">&#x83B7;&#x53D6;</h5>
+<pre><code>hkeys key  #&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x952E;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;
+hget  key field #&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;
+hmget key field1 field2 #&#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;
+hvals key  #&#x83B7;&#x53D6;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x503C;
+</code></pre><p><img src="../img/13.jpg" alt="img"></p>
+<pre><code>hgetall key #&#x83B7;&#x53D6;&#x5728;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x6307;&#x5B9A; key &#x7684;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x548C;&#x503C;
+hexists key field  #&#x67E5;&#x770B;&#x54C8;&#x5E0C;&#x8868; key &#x4E2D;&#xFF0C;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x6BB5;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;
+hlen key #&#x83B7;&#x53D6;&#x54C8;&#x5E0C;&#x8868;&#x4E2D;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x91CF;
+</code></pre><p><img src="../img/14.jpg" alt="img"></p>
+<h5 id="&#x5220;&#x9664;">&#x5220;&#x9664;</h5>
+<pre><code>del key #&#x5C06;&#x6574;&#x4E2A;hash&#x5220;&#x9664;
+hdel key field1 field2 #&#x5220;&#x9664;&#x5C5E;&#x6027;&#xFF0C;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x4F1A;&#x88AB;&#x4E00;&#x8D77;&#x5220;&#x9664;
+</code></pre><p><img src="../img/15.jpg" alt="img"></p>
+<h4 id="3&#x3001;&#x5217;&#x8868;list&#x7C7B;&#x578B;">3&#x3001;&#x5217;&#x8868;list&#x7C7B;&#x578B;</h4>
+<p>&#x5217;&#x8868;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#xFF0C;&#x6309;&#x7167;&#x63D2;&#x5165;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#x3002;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5230;&#x5217;&#x8868;&#x7684;&#x5934;&#x90E8;&#xFF08;&#x5DE6;&#x8FB9;&#xFF09;&#x6216;&#x8005;&#x5C3E;&#x90E8;&#xFF08;&#x53F3;&#x8FB9;&#xFF09;</p>
+<p>list&#x7C7B;&#x578B;&#x7684;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code>lpush key value1 value2 #&#x5728;&#x5DE6;&#x4FA7;&#x63D2;&#x5165;&#x6570;&#x636E;
+
+lpushx key value # &#x53EA;&#x6709;key&#x503C;&#x5B58;&#x5728;&#x7684;&#x65F6;&#x5019;&#x624D;&#x80FD;&#x63D2;&#x5165;&#x6570;&#x636E;
+
+rpush key value1 value2 #&#x5728;&#x53F3;&#x4FA7;&#x63D2;&#x5165;&#x6570;&#x636E;
+
+rpushx key value # &#x53EA;&#x6709;key&#x5B58;&#x5728;&#x65F6;&#x624D;&#x80FD;&#x63D2;&#x5165;&#x6570;&#x636E;
+
+linsert key before&#x6216;after #&#x5728;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x524D;&#x6216;&#x540E;&#x63D2;&#x5165;&#x65B0;&#x5143;&#x7D20;
+
+lpop key #&#x79FB;&#x9664;&#x5217;&#x8868;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+
+blpop key timeout # &#x79FB;&#x9664;&#x5217;&#x8868;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;
+
+rpop key #&#x79FB;&#x9664;&#x5217;&#x8868;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+
+brpop key timeout#&#x79FB;&#x9664;&#x5217;&#x8868;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C; &#x5982;&#x679C;&#x5217;&#x8868;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x4F1A;&#x963B;&#x585E;&#x5217;&#x8868;&#x76F4;&#x5230;&#x7B49;&#x5F85;&#x8D85;&#x65F6;&#x6216;&#x53D1;&#x73B0;&#x53EF;&#x5F39;&#x51FA;&#x5143;&#x7D20;&#x4E3A;&#x6B62;&#x3002; 
+
+llen key  #&#x83B7;&#x53D6;&#x5217;&#x8868;&#x957F;&#x5EA6;
+
+lrange key start stop #&#x83B7;&#x53D6;&#x5217;&#x8868;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x5143;&#x7D20;
+
+lindex key index #&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x83B7;&#x53D6;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;
+</code></pre><p><img src="../img/list.png" alt=""></p>
+<h4 id="4&#x3001;&#x96C6;&#x5408;set&#x7C7B;&#x578B;">4&#x3001;&#x96C6;&#x5408;set&#x7C7B;&#x578B;</h4>
+<p>&#x96C6;&#x5408;&#x7279;&#x70B9;&#xFF1A;&#x65E0;&#x5E8F;&#x4E0D;&#x91CD;&#x590D;&#x3002;</p>
+<p>set&#x7C7B;&#x578B;&#x7684;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code>sadd key member1 [member2] #&#x5411;&#x96C6;&#x5408;&#x4E2D;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x6210;&#x5458;
+
+scard key #&#x83B7;&#x53D6;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;&#x6570;
+
+smembers key #&#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;
+
+srem key member1 member2#&#x79FB;&#x9664;&#x96C6;&#x5408;&#x4E2D;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6210;&#x5458;
+
+
+sdiff key1 [key2]  #&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6240;&#x6709;&#x96C6;&#x5408;&#x7684;&#x5DEE;&#x96C6;
+
+sinter key1 [key2] #&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6240;&#x6709;&#x96C6;&#x5408;&#x7684;&#x4EA4;&#x96C6;
+
+sunion key1 [key2] #&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7ED9;&#x5B9A;&#x96C6;&#x5408;&#x7684;&#x5E76;&#x96C6;
+</code></pre><h4 id="5&#x3001;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7C7B;&#x578B;">5&#x3001;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7C7B;&#x578B;</h4>
+<h5 id="&#x6DFB;&#x52A0;&#x5143;&#x7D20;">&#x6DFB;&#x52A0;&#x5143;&#x7D20;</h5>
+<pre><code>zadd key &#x6743;&#x91CD;1 &#x503C;1 &#x6743;&#x91CD;2 &#x503C;2 #&#x5411;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6210;&#x5458;&#xFF0C;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x5DF2;&#x5B58;&#x5728;&#x6210;&#x5458;&#x7684;&#x5206;&#x6570;
+&#x83B7;&#x53D6;&#x5143;&#x7D20;&#xFF1A;
+
+zcrad key  #&#x83B7;&#x53D6;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x6210;&#x5458;&#x6570; 
+
+zrange key start stop #&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x533A;&#x95F4;&#x8FD4;&#x56DE;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x6210;&#x6307;&#x5B9A;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458;start&#x3001;stop&#x4E3A;&#x5143;&#x7D20;&#x7684;&#x4E0B;&#x6807;&#x7D22;&#x5F15;,&#x7D22;&#x5F15;&#x4ECE;&#x5DE6;&#x4FA7;&#x5F00;&#x59CB;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E3A;0
+
+zrange key 0 -1 #&#x8868;&#x793A;&#x83B7;&#x53D6;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x7684;&#x5168;&#x90E8;&#x5143;&#x7D20;&#xFF0C;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x662F;&#x8D1F;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x4ECE;&#x5C3E;&#x90E8;&#x5F00;&#x59CB;&#x8BA1;&#x6570;&#xFF0C;&#x5982;-1&#x8868;&#x793A;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+
+zrangebyscore key min max #&#x8FD4;&#x56DE;score&#x503C;&#x5728;min&#x548C;max&#x4E4B;&#x95F4;&#x7684;&#x6210;&#x5458;
+
+zscore key member #&#x8FD4;&#x56DE;&#x5143;&#x7D20;member&#x7684;score&#x503C;
+
+zrank key member  #&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x503C;
+</code></pre><h4 id="&#x5220;&#x9664;&#x5143;&#x7D20;">&#x5220;&#x9664;&#x5143;&#x7D20;</h4>
+<pre><code>zrem key member1 member2 #&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5143;&#x7D20;
+
+zremrangebyscore key min max #&#x5220;&#x9664;&#x6307;&#x5B9A;&#x6743;&#x91CD;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;
+</code></pre><footer class="page-footer"><span class="copyright">CopyRight&#xA9;2019 &#x54B8;&#x9C7C;&#x8D85;&#x4EBA; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-01-04 02:08:03
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../files/redis01.html" class="navigation navigation-prev " aria-label="Previous page: 5.1Redis安装与简介"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../files/redis03.html" class="navigation navigation-next " aria-label="Next page: 5.3Python与Redis交互"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/js.cookie.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"tbfed-pagefooter":{"copyright":"CopyRight©2019 咸鱼超人","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"sectionx":{"tag":"b"},"toggle-chapters":{},"splitter":{},"emphasize":{},"mcqx":{},"katex":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 数据库 -->
+</html>
